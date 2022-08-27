@@ -1,6 +1,7 @@
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
 import 'package:petshow/src/auth/sign_up_screen.dart';
+import 'package:petshow/src/base/base_screen.dart';
 import 'package:petshow/src/config/custom_colors.dart';
 
 import 'components/custom_text_field.dart';
@@ -100,7 +101,15 @@ class SignInScreen extends StatelessWidget {
                             borderRadius: BorderRadius.circular(18),
                           ),
                         ),
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.of(context).pushReplacement(
+                            MaterialPageRoute(
+                              builder: ((context) {
+                                return  const BaseScreen();
+                              }),
+                            ),
+                          );
+                        },
                         child: const Text(
                           'Entrar',
                           style: TextStyle(
@@ -165,7 +174,7 @@ class SignInScreen extends StatelessWidget {
                           Navigator.of(context).push(
                             MaterialPageRoute(
                               builder: (c) {
-                                return const SignUpScreen();
+                                return SignUpScreen();
                               },
                             ),
                           );
