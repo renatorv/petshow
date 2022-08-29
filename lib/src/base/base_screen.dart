@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:petshow/src/home/home_tab.dart';
 
 class BaseScreen extends StatefulWidget {
   const BaseScreen({Key? key}) : super(key: key);
@@ -14,14 +15,11 @@ class _BaseScreenState extends State<BaseScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text(''),
-      ),
       body: PageView(
         physics: const NeverScrollableScrollPhysics(),
         controller: pageController,
         children: [
-          Container(color: Colors.amber),
+          const HomeTab(),
           Container(color: Colors.green),
           Container(color: Colors.blue),
           Container(color: Colors.brown),
