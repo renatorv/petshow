@@ -16,4 +16,4 @@ For help getting started with Flutter development, view the
 samples, guidance on mobile development, and a full API reference.
 "# petshow" 
 
-proxima aula => 18. AppBar com nome e ícone do carrínho
+proxima aula => 19. Badge e campo de pesquisa
