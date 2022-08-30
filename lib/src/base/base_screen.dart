@@ -15,6 +15,7 @@ class _BaseScreenState extends State<BaseScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      extendBody: true,
       body: PageView(
         physics: const NeverScrollableScrollPhysics(),
         controller: pageController,
@@ -26,6 +27,7 @@ class _BaseScreenState extends State<BaseScreen> {
         ],
       ),
       bottomNavigationBar: BottomNavigationBar(
+        showUnselectedLabels: false,
         currentIndex: currentIndex,
         onTap: (index) {
           setState(() {
@@ -34,19 +36,17 @@ class _BaseScreenState extends State<BaseScreen> {
           });
         },
         type: BottomNavigationBarType.fixed,
-        backgroundColor: Colors.orange,
+        // backgroundColor: Colors.orange,
+        // backgroundColor: const Color(0x00ffffff),
         selectedItemColor: Colors.white,
         unselectedItemColor: Colors.white.withAlpha(100),
         selectedIconTheme: const IconThemeData(size: 36),
         items: const [
+          BottomNavigationBarItem(icon: Icon(Icons.home_outlined), label: ''),
           BottomNavigationBarItem(
-              icon: Icon(Icons.home_outlined), label: 'Home'),
-          BottomNavigationBarItem(
-              icon: Icon(Icons.shopping_cart_checkout_outlined),
-              label: 'Carrinho'),
-          BottomNavigationBarItem(icon: Icon(Icons.list), label: 'Pedidos'),
-          BottomNavigationBarItem(
-              icon: Icon(Icons.person_outline), label: 'Perfil'),
+              icon: Icon(Icons.shopping_cart_checkout_outlined), label: ''),
+          BottomNavigationBarItem(icon: Icon(Icons.list), label: ''),
+          BottomNavigationBarItem(icon: Icon(Icons.person_outline), label: ''),
         ],
       ),
     );

@@ -16,4 +16,6 @@ For help getting started with Flutter development, view the
 samples, guidance on mobile development, and a full API reference.
 "# petshow" 
 
+Lista de Categorias => 20. Seção de categorias
+
 proxima aula => 19. Badge e campo de pesquisa
