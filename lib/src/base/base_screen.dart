@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:petshow/src/config/custom_colors.dart';
 import 'package:petshow/src/home/home_tab.dart';
 
 class BaseScreen extends StatefulWidget {
@@ -36,15 +37,13 @@ class _BaseScreenState extends State<BaseScreen> {
           });
         },
         type: BottomNavigationBarType.fixed,
-        // backgroundColor: Colors.orange,
-        // backgroundColor: const Color(0x00ffffff),
         selectedItemColor: Colors.white,
         unselectedItemColor: Colors.white.withAlpha(100),
         selectedIconTheme: const IconThemeData(size: 36),
+        backgroundColor: CustomColors.customSwatchColor,
         items: const [
           BottomNavigationBarItem(icon: Icon(Icons.home_outlined), label: ''),
-          BottomNavigationBarItem(
-              icon: Icon(Icons.shopping_cart_checkout_outlined), label: ''),
+          BottomNavigationBarItem(icon: Icon(Icons.search_outlined), label: ''),
           BottomNavigationBarItem(icon: Icon(Icons.list), label: ''),
           BottomNavigationBarItem(icon: Icon(Icons.person_outline), label: ''),
         ],
