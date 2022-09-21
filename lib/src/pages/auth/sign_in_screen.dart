@@ -1,10 +1,10 @@
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
-import 'package:petshow/src/auth/sign_up_screen.dart';
-import 'package:petshow/src/base/base_screen.dart';
 import 'package:petshow/src/config/custom_colors.dart';
 
+import '../base/base_screen.dart';
 import 'components/custom_text_field.dart';
+import 'sign_up_screen.dart';
 
 class SignInScreen extends StatelessWidget {
   const SignInScreen({Key? key}) : super(key: key);
@@ -105,7 +105,7 @@ class SignInScreen extends StatelessWidget {
                           Navigator.of(context).pushReplacement(
                             MaterialPageRoute(
                               builder: ((context) {
-                                return  const BaseScreen();
+                                return const BaseScreen();
                               }),
                             ),
                           );

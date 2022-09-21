@@ -83,5 +83,3 @@ class HomeTab extends StatelessWidget {
     );
   }
 }
-
-20. Seção de categorias
